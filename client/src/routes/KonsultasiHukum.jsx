@@ -9,6 +9,11 @@ import star from '../images/star.png';
 import linkIcon from '../images/link-icon.png';
 import location from '../images/location.png';
 import lawyer1 from '../images/lawyer1.png';
+import lawyer2 from '../images/lawyer2.png';
+import lawyer3 from '../images/lawyer3.png';
+import lawyer4 from '../images/lawyer4.png';
+import lawyer5 from '../images/lawyer5.png';
+import lawyer6 from '../images/lawyer6.png';
 
 const userNavigation = [
   { name: 'Your Profile', href: '#' },
@@ -39,59 +44,58 @@ const dataLawyer = [
     lawyerPrice: 20000,
   },
   {
-    img: lawyer1,
-    lawyerName: 'Aditya Pratama',
-    lawyerCategory: 'Hukum Bisnis',
-    lawyerRating: '4.7',
+    img: lawyer2,
+    lawyerName: 'Budi Santoso',
+    lawyerCategory: 'Hukum Keluarga',
+    lawyerRating: '4.2',
     lawyerDesc:
-      'Saya memiliki pengalaman luas dalam menyusun, meninjau, dan menegosiasikan kontrak bisnis.',
-    lawyerLink: 'apratama.com',
+      'Saya siap membantu Anda menemukan solusi terbaik untuk masalah hukum keluarga Anda.',
+    lawyerLink: 'budiso.com',
     lawyerLocation: 'Jakarta',
-    lawyerPrice: 20000,
+    lawyerPrice: 35000,
   },
   {
-    img: lawyer1,
-    lawyerName: 'Aditya Pratama',
-    lawyerCategory: 'Hukum Bisnis',
-    lawyerRating: '4.7',
-    lawyerDesc:
-      'Saya memiliki pengalaman luas dalam menyusun, meninjau, dan menegosiasikan kontrak bisnis.',
-    lawyerLink: 'apratama.com',
+    img: lawyer3,
+    lawyerName: 'Rina Lestari',
+    lawyerCategory: 'Hukum Perdata',
+    lawyerRating: '4.5',
+    lawyerDesc: 'Saya siap membantu Anda menghadapi berbagai kasus hukum anda.',
+    lawyerLink: 'rinlestari.com',
     lawyerLocation: 'Jakarta',
-    lawyerPrice: 20000,
+    lawyerPrice: 75000,
   },
   {
-    img: lawyer1,
-    lawyerName: 'Aditya Pratama',
-    lawyerCategory: 'Hukum Bisnis',
-    lawyerRating: '4.7',
+    img: lawyer4,
+    lawyerName: 'Eka Wulandari',
+    lawyerCategory: 'Hukum Perusahaan',
+    lawyerRating: '4.3',
     lawyerDesc:
-      'Saya memiliki pengalaman luas dalam menyusun, meninjau, dan menegosiasikan kontrak bisnis.',
-    lawyerLink: 'apratama.com',
+      'Saya menawarkan jasa konsultasi hukum khusus untuk startup dan usaha  kecil.',
+    lawyerLink: 'ewulandari.com',
     lawyerLocation: 'Jakarta',
-    lawyerPrice: 20000,
+    lawyerPrice: 92000,
   },
   {
-    img: lawyer1,
-    lawyerName: 'Aditya Pratama',
-    lawyerCategory: 'Hukum Bisnis',
-    lawyerRating: '4.7',
+    img: lawyer5,
+    lawyerName: 'Agus Wijaya',
+    lawyerCategory: 'Hukum Umum',
+    lawyerRating: '4.9',
     lawyerDesc:
-      'Saya memiliki pengalaman luas dalam menyusun, meninjau, dan menegosiasikan kontrak bisnis.',
-    lawyerLink: 'apratama.com',
+      'saya siap memberikan nasihat yang jelas dan solutif untuk masalah Anda. Hubungi saya sekarang untuk konsultasi pertama Anda.',
+    lawyerLink: 'agwjaya.com',
     lawyerLocation: 'Jakarta',
-    lawyerPrice: 20000,
+    lawyerPrice: 42000,
   },
   {
-    img: lawyer1,
-    lawyerName: 'Aditya Pratama',
-    lawyerCategory: 'Hukum Bisnis',
-    lawyerRating: '4.7',
+    img: lawyer6,
+    lawyerName: 'Sari Rahmawati',
+    lawyerCategory: 'Hukum Umum',
+    lawyerRating: '4.4',
     lawyerDesc:
-      'Saya memiliki pengalaman luas dalam menyusun, meninjau, dan menegosiasikan kontrak bisnis.',
-    lawyerLink: 'apratama.com',
+      'Dari masalah kontrak hingga kepatuhan hukum, saya menawarkan solusi yang tepat dan terpercaya.',
+    lawyerLink: 'srahmawati.com',
     lawyerLocation: 'Jakarta',
-    lawyerPrice: 20000,
+    lawyerPrice: 76000,
   },
 ];
 
@@ -106,7 +110,11 @@ function KonsultasiHukum() {
         </Link>
         <div className='flex gap-6'>
           {navigation.map((item) => (
-            <Link key={item} to={item.href} className=''>
+            <Link
+              key={item}
+              to={item.href}
+              className='hover:text-[#FFB800] duration-300'
+            >
               {item.name}
             </Link>
           ))}
@@ -197,7 +205,7 @@ function KonsultasiHukum() {
                   </div>
                 </div>
               </div>
-              <p>{item.lawyerDesc}</p>
+              <p className='h-[60px]'>{item.lawyerDesc}</p>
               <div>
                 <div className='flex items-center gap-2'>
                   <img src={linkIcon} alt='' />
@@ -210,7 +218,7 @@ function KonsultasiHukum() {
               </div>
               <Link
                 to='/register'
-                className='text-[18px] bg-[#FFB800] py-3 text-center text-white rounded-[80px]'
+                className='text-[18px] bg-[#FFB800] py-3 text-center text-white rounded-[80px] hover:bg-slate-950 transition-all duration-300'
               >
                 Rp. {item.lawyerPrice} / Sesi
               </Link>

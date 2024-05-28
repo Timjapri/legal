@@ -49,7 +49,11 @@ function TIpsHukum() {
         </Link>
         <div className='flex gap-6'>
           {navigation.map((item) => (
-            <Link key={item} to={item.href} className=''>
+            <Link
+              key={item}
+              to={item.href}
+              className='hover:text-[#FFB800] duration-300'
+            >
               {item.name}
             </Link>
           ))}
@@ -119,9 +123,12 @@ function TIpsHukum() {
         </div>
       </div>
       {/* Content Section */}
-      <div className='flex flex-wrap justify-between mt-[120px]'>
+      <div className='flex flex-wrap justify-between mt-[120px] '>
         {content.map((item) => (
-          <div key={item.imgSrc} className='mb-[40px]'>
+          <div
+            key={item.imgSrc}
+            className='mb-[40px] hover:scale-105 transition-all duration-300 hover:cursor-pointer'
+          >
             <img src={item.imgSrc} alt='gambar' className='w-[440px]' />
           </div>
         ))}

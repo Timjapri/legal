@@ -82,7 +82,11 @@ function InfoHukum() {
         </Link>
         <div className='flex gap-6'>
           {navigation.map((item) => (
-            <Link key={item} to={item.href} className=''>
+            <Link
+              key={item}
+              to={item.href}
+              className='hover:text-[#FFB800] duration-300'
+            >
               {item.name}
             </Link>
           ))}
@@ -229,7 +233,7 @@ function InfoHukum() {
               className='outline-1 outline-slate-200 outline rounded-[10px] p-6'
             >
               <div className='flex items-start justify-between'>
-                <div className='w-[50%] flex flex-col gap-2'>
+                <div className='w-[60%] flex flex-col gap-2'>
                   <h1 className='font-medium text-[24px]'>{item.title}</h1>
                   <p className='font-[20px]'>{item.descr}</p>
                 </div>

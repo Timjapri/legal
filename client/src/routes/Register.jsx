@@ -104,7 +104,9 @@ function Register() {
             >
               Daftar
             </button>
-            <p className='w-full text-center'>Sudah punya akun? Masuk</p>
+            <p className='w-full text-center'>
+              Sudah punya akun? <Link className='underline'>Masuk</Link>
+            </p>
           </form>
         </div>
       </div>
