@@ -5,6 +5,8 @@ import Home from './routes/Home.jsx';
 import InfoHukum from './routes/InfoHukum.jsx';
 import ErrorPage from './routes/ErrorPage.jsx';
 import TIpsHukum from './routes/TIpsHukum.jsx';
+import KonsultasiHukum from './routes/KonsultasiHukum.jsx';
+import Register from './routes/Register.jsx';
 
 const router = createBrowserRouter([
   {
@@ -19,6 +21,14 @@ const router = createBrowserRouter([
   {
     path: '/tips-hukum',
     element: <TIpsHukum />,
+  },
+  {
+    path: '/konsultasi-hukum',
+    element: <KonsultasiHukum />,
+  },
+  {
+    path: '/register',
+    element: <Register />,
   },
 ]);
 

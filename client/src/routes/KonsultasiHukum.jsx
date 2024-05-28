@@ -5,15 +5,10 @@ import logo from '../images/LegalAssist-White.png';
 import profile from '../images/profile-icon.png';
 import { Menu, Transition } from '@headlessui/react';
 import notification from '../images/notification-icon.png';
-import hero from '../images/hero-img.png';
-import feature1 from '../images/feature-1.png';
-import feature2 from '../images/feature-2.png';
-import feature3 from '../images/feature-3.png';
-import profile1 from '../images/profile-pict1.png';
-import lawyer1 from '../images/lawyer1.png';
 import star from '../images/star.png';
 import linkIcon from '../images/link-icon.png';
 import location from '../images/location.png';
+import lawyer1 from '../images/lawyer1.png';
 
 const userNavigation = [
   { name: 'Your Profile', href: '#' },
@@ -26,6 +21,10 @@ const navigation = [
   { name: 'Tips Hukum', href: '/tips-hukum', current: false },
   { name: 'Konsultasi Hukum', href: '/konsultasi-hukum', current: false },
 ];
+
+function classNames(...classes) {
+  return classes.filter(Boolean).join(' ');
+}
 
 const dataLawyer = [
   {
@@ -61,34 +60,42 @@ const dataLawyer = [
     lawyerLocation: 'Jakarta',
     lawyerPrice: 20000,
   },
+  {
+    img: lawyer1,
+    lawyerName: 'Aditya Pratama',
+    lawyerCategory: 'Hukum Bisnis',
+    lawyerRating: '4.7',
+    lawyerDesc:
+      'Saya memiliki pengalaman luas dalam menyusun, meninjau, dan menegosiasikan kontrak bisnis.',
+    lawyerLink: 'apratama.com',
+    lawyerLocation: 'Jakarta',
+    lawyerPrice: 20000,
+  },
+  {
+    img: lawyer1,
+    lawyerName: 'Aditya Pratama',
+    lawyerCategory: 'Hukum Bisnis',
+    lawyerRating: '4.7',
+    lawyerDesc:
+      'Saya memiliki pengalaman luas dalam menyusun, meninjau, dan menegosiasikan kontrak bisnis.',
+    lawyerLink: 'apratama.com',
+    lawyerLocation: 'Jakarta',
+    lawyerPrice: 20000,
+  },
+  {
+    img: lawyer1,
+    lawyerName: 'Aditya Pratama',
+    lawyerCategory: 'Hukum Bisnis',
+    lawyerRating: '4.7',
+    lawyerDesc:
+      'Saya memiliki pengalaman luas dalam menyusun, meninjau, dan menegosiasikan kontrak bisnis.',
+    lawyerLink: 'apratama.com',
+    lawyerLocation: 'Jakarta',
+    lawyerPrice: 20000,
+  },
 ];
 
-const dataFeature = [
-  {
-    featureImg: feature1,
-    featureTitle: 'Info Hukum',
-    featureDesc:
-      'Dalam dunia yang kompleks ini, pengetahuan adalah kekuatan. Kami memahami bahwa setiap keputusan hukum Anda membutuhkan pemahaman yang komprehensif dan terperinci. Itulah sebabnya kami hadir, sebagai sumber informasi hukum yang tepercaya dan terkini.',
-  },
-  {
-    featureImg: feature2,
-    featureTitle: 'Tips Hukum',
-    featureDesc:
-      'Dalam dunia yang kompleks ini, pengetahuan adalah kekuatan. Kami memahami bahwa setiap keputusan hukum Anda membutuhkan pemahaman yang komprehensif dan terperinci. Itulah sebabnya kami hadir, sebagai sumber informasi hukum yang tepercaya dan terkini.',
-  },
-  {
-    featureImg: feature3,
-    featureTitle: 'Konsultasi Hukum',
-    featureDesc:
-      'Dalam dunia yang kompleks ini, pengetahuan adalah kekuatan. Kami memahami bahwa setiap keputusan hukum Anda membutuhkan pemahaman yang komprehensif dan terperinci. Itulah sebabnya kami hadir, sebagai sumber informasi hukum yang tepercaya dan terkini.',
-  },
-];
-
-function classNames(...classes) {
-  return classes.filter(Boolean).join(' ');
-}
-
-function Home() {
+function KonsultasiHukum() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   return (
     <div className='container mt-4'>
@@ -168,64 +175,14 @@ function Home() {
           )}
         </div>
       </div>
-      {/* Hero Section */}
-      <div className='flex my-20 justify-between items-center'>
-        <div className='w-[572px]'>
-          <h1 className='text-5xl font-bold mb-4 tracking-wider'>
-            Jangan Biarkan Tantangan Hukum Mengintimidasi Anda.
-          </h1>
-          <p className='text-lg mb-4'>
-            Kami tidak hanya menyediakan informasi hukum, tetapi juga pandangan
-            yang diarahkan untuk melindungi kepentingan Anda. Dari konsultasi
-            hingga representasi, kami bersama Anda setiap langkah dalam
-            perjalanan hukum Anda.
-          </p>
-          <Link
-            to='/konsultasi-hukum'
-            className='px-2 py-1 bg-black text-white rounded-lg'
-          >
-            Pelajari Lebih Lanjut
-          </Link>
-        </div>
-        <div className=''>
-          <img src={hero} alt='' />
-        </div>
-      </div>
-
-      {/* Layanan Kami */}
-      <div className='my-[220px]'>
-        <h1 className='text-[32px] font-bold mb-6'>Layanan Kami</h1>
-        <div className='flex justify-between'>
-          {dataFeature.map((item) => (
-            <div
-              key={item}
-              className='flex flex-col items-start w-[440px] gap-5'
-            >
-              <img src={item.featureImg} alt='' />
-              <div className='flex flex-col gap-2'>
-                <h1 className='font-semibold text-[32px]'>
-                  {item.featureTitle}
-                </h1>
-                <p>{item.featureDesc}</p>
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-
       {/* Bantuan Hukum Terpecaya */}
-      <div className='my-[220px]'>
-        <div>
-          <h1 className='text-[32px] font-bold mb-6'>
-            Bantuan Hukum Terpecaya
-          </h1>
-        </div>
-        <div className='flex justify-between'>
+      <div className='my-[100px]'>
+        <div className='flex justify-between flex-wrap'>
           {dataLawyer.map((item) => (
             <Link
               to='/register'
               key={item}
-              className='w-[440px] px-8 py-6 rounded-xl border-[#D5E0F6] border-2 flex flex-col gap-4 hover:scale-105 transition-all duration-300 hover:cursor-pointer'
+              className='w-[440px] mb-5 px-8 py-6 rounded-xl border-[#D5E0F6] border-2 flex flex-col gap-4 hover:scale-105 transition-all duration-300 hover:cursor-pointer'
             >
               <div className='flex gap-4 items-center'>
                 <img src={item.img} alt='' className='w-[86px]' />
@@ -265,4 +222,4 @@ function Home() {
   );
 }
 
-export default Home;
+export default KonsultasiHukum;
